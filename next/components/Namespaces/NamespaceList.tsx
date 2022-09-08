@@ -24,7 +24,7 @@ const NamespaceList = ({
   const listOfNamespaces = namespaces.map((namespace) => {
     return (
       <li key={Math.random()}>
-        <p className='md:text-md p-4 text-xs   transition-all   duration-100 hover:scale-105 hover:bg-zinc-100/40 hover:pl-6 lg:text-lg   '>
+        <p className='md:text-md p-4 text-xs   transition-all   duration-100 hover:scale-105 hover:bg-zinc-100/40 hover:pl-4 lg:text-lg   '>
           {namespace.name}
         </p>
       </li>
@@ -45,7 +45,7 @@ const NamespaceList = ({
             onClick={toggleAddingNewNamespace}
             className='group w-full bg-green-600/90  p-4 text-sm text-white transition-all duration-200 hover:bg-green-600 '
           >
-            <p className='h-full w-full transition-all duration-300 group-hover:scale-105'>
+            <p className='h-full w-full transition-all duration-300 group-hover:scale-100'>
               {' '}
               + New Namespace
             </p>
