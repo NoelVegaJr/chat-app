@@ -1,33 +1,6 @@
 import React from 'react';
-
-const ChatInput = () => {
-  return (
-    <div className='px-8 py-4  w-full bg-slate-100 '>
-      <form className=' flex gap-2 border p-2 rounded-xl hover:border-slate-300 transition-all duration-300'>
-        <input
-          type='text'
-          placeholder='Message'
-          className='w-full md:text-lg outline-none bg-slate-50'
-        />
-        <button type='submit' className='bg-green-800 px-2 py-1 rounded-md'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            viewBox='0 0 24 24'
-            strokeWidth={1.5}
-            stroke='currentColor'
-            className='w-6 h-6 fill-white stroke-green-800'
-          >
-            <path
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              d='M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5'
-            />
-          </svg>
-        </button>
-      </form>
-    </div>
-  );
-};
+import ChatInput from './ChatInput';
+import ChatTitle from './ChatTitle';
 
 const Message = ({ text }) => {
   return (
@@ -78,30 +51,6 @@ const ChatWindow = ({ className, children }) => {
     <div className={`chat-window bg-slate-100 ${className}   relative `}>
       {children}
     </div>
-  );
-};
-
-const ChatTitle = ({ title }) => {
-  return (
-    <header className='chat-title px-4 py-5  bg-slate-100 w-full border-b '>
-      <button className=' text-xl font-bold hover:bg-zinc-200/40 p-2 rounded-lg transition-all duration-100 flex items-center gap-2 h-full'>
-        # {title}
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          fill='none'
-          viewBox='0 0 24 24'
-          strokeWidth={1.5}
-          stroke='currentColor'
-          className='w-3 h-3'
-        >
-          <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            d='M19.5 8.25l-7.5 7.5-7.5-7.5'
-          />
-        </svg>
-      </button>
-    </header>
   );
 };
 
